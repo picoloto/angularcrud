@@ -1,0 +1,21 @@
+.toolbar-background {
+  background-color: #3F51B5;
+  width: 100vw;
+  height: 3em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: 3em;
+  z-index: 99999;
+}
+
+.toolbar-title {
+  color: white;
+  padding-left: 32px;
+}
+
+@media only screen and (max-width: 767px) {
+  .toolbar-title {
+    padding-left: 16px;
+  }
+}

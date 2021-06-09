@@ -1,0 +1,81 @@
+<app-action-bar>
+  <div class="p-d-flex p-ai-center p-jc-between">
+    <app-custom-breadcrumb (listaFuncionariosClick)="onCancelarClick()"></app-custom-breadcrumb>
+  </div>
+</app-action-bar>
+<app-custom-progress-bar *ngIf="!!funcionarioForm.disabled"></app-custom-progress-bar>
+
+<p-card header="Dados">
+  <form [formGroup]="funcionarioForm">
+    <div class="p-grid">
+
+      <div class="p-col-12">
+        <app-input-container [control]="funcionarioForm.controls.nome">
+          <input appAutoFocus
+                 autocomplete="off"
+                 formControlName="nome"
+                 id="nome"
+                 pInputText
+                 type="text">
+          <label for="nome">Nome *</label>
+        </app-input-container>
+      </div>
+
+      <div class="p-col-12">
+        <app-input-container [control]="funcionarioForm.controls.sobrenome">
+          <input autocomplete="off"
+                 formControlName="sobrenome"
+                 id="sobrenome"
+                 pInputText
+                 type="text">
+          <label for="nome">Sobrenome *</label>
+        </app-input-container>
+      </div>
+
+      <div class="p-col-12">
+        <app-input-container [control]="funcionarioForm.controls.email">
+          <input autocomplete="off"
+                 formControlName="email"
+                 id="email"
+                 pInputText
+                 type="text">
+          <label for="nome">E-mail *</label>
+        </app-input-container>
+      </div>
+
+      <div class="p-col-12">
+        <app-input-container [control]="funcionarioForm.controls.numeroNis">
+          <input [allowNegativeNumbers]="false"
+                 autocomplete="off"
+                 formControlName="numeroNis"
+                 id="numeroNis"
+                 mask="9*"
+                 pInputText
+                 type="text">
+          <label for="nome">Número do NIS (PIS) *</label>
+        </app-input-container>
+      </div>
+
+      <div class="p-col-12">
+        <div class="p-d-flex p-ai-center p-jc-end">
+          <p-button
+            (onClick)="onCancelarClick()"
+            [disabled]="!!funcionarioForm.disabled"
+            class="p-mr-2"
+            icon="pi pi-times"
+            label="Cancelar"
+            styleClass="p-button-text"
+            type="button"></p-button>
+          <p-button
+            (onClick)="onSalvarClick()"
+            [disabled]="!!funcionarioForm.disabled"
+            icon="pi pi-save"
+            label="Salvar"
+            styleClass="p-button-text"
+            type="button"></p-button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+</p-card>

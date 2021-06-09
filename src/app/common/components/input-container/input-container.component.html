@@ -1,0 +1,6 @@
+<div class="p-field">
+  <div class="p-float-label">
+    <ng-content></ng-content>
+  </div>
+  <small *ngIf="!!control.invalid && !control.pristine" class="p-invalid">{{control.errors?.error}}</small>
+</div>

@@ -1,1 +1,142 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Roboto, PrimeIcons, sans-serif !important;
+}
+
+body {
+  margin: 114px 30px 16px 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    margin: 114px 30px 16px 30px;
+  }
+
+  .custom-progress-bar .p-progressbar {
+    margin-left: 0;
+  }
+}
+
+.p-ripple.ripple-silver .p-ink {
+  background: silver;
+}
+
+
+.space {
+  padding-bottom: 16px;
+}
+
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+th.lista-acoes {
+  width: 140px;
+  text-align: center !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.p-datatable .p-datatable-tbody > tr > td.lista-acoes {
+  width: 140px;
+  text-align: center;
+}
+
+.p-confirm-dialog .p-dialog-content {
+  white-space: pre-line;
+}
+
+.p-toast .p-toast-message {
+  margin: 2em 0 1rem 0 !important;
+}
+
+.p-dropdown {
+  width: 100%;
+}
+
+.p-inputtext {
+  width: 100%;
+}
+
+.p-inputgroup {
+  margin-bottom: 1rem;
+}
+
+.p-calendar {
+  width: 100%;
+}
+
+.p-inline-message.p-inline-message-warn {
+  background: #FFECB3 !important;
+  border: solid #d9a300 !important;
+  border-width: 0 0 0 6px !important;
+  color: #6d5100 !important;
+  width: 100% !important;
+  justify-content: start !important;
+}
+
+.p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+  white-space: pre-line;
+}
+
+.p-breadcrumb {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.p-breadcrumb > ul > li {
+  cursor: default !important;
+}
+
+.p-breadcrumb ul li .p-menuitem-link{
+  cursor: pointer !important;
+}
+
+.custom-progress-bar .p-progressbar {
+  top: 96px;
+  width: 100vw;
+  position: fixed;
+  margin-left: -31px;
+  z-index: 13;
+}
+
+.invalid .p-calendar-w-btn {
+  border-color: #B00020 !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .p-datatable.p-datatable-responsive .p-datatable-tbody > tr > td {
+    border: 0;
+    clear: left;
+    display: block;
+    float: left;
+    text-align: left;
+    width: 100%;
+  }
+
+  .p-datatable.p-datatable-responsive .p-datatable-tfoot > tr > td, .p-datatable.p-datatable-responsive .p-datatable-thead > tr > th {
+    display: none !important;
+  }
+
+  .p-datatable.p-datatable-responsive .p-datatable-tbody > tr > td .p-column-title {
+    display: inline-block !important;
+    font-weight: 700;
+    margin: -.4em 1em -.4em -.4rem;
+    min-width: 30%;
+    padding: .4rem;
+  }
+
+  td.lista-acoes {
+    text-align: start !important;
+    line-height: 80px;
+  }
+  td.lista-acoes .acao {
+    margin-bottom: 1rem !important;
+  }
+
+}
